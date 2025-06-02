@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/chateau.css">
+  <script src="../js/general.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Château Ambulant</title>
+<script>
+  
+  </script>
+</head>
+<body>
+  <audio id="background-audio" src="../son/chateau.mp3" autoplay muted loop></audio>
+
+
+
+  <div class="explore-map">
+    <a href="#sophie">Extérieur</a>
+    <a href="#calcifer">Calcifer</a>
+    <a href="#sorciere">Sorcière</a>
+    <a href="#guerre">La guerre</a>
+  </div>
+
+  <section class="section" id="sophie">
+    
+  <header>
+    <div class="content">
+      <img src="../image/logo.png" id="logo" alt="Logo" width="200" height="100">
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="jeu.html">Jeux</a>
+        <a href="contact.html">Contact</a>
+        <a href="a-propos.html">À propos</a>
+      </nav>
+      <div id="mute-toggle" class="icon-button" title="Mute/Unmute">
+        <svg id="mute-icon" xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" fill="black">
+          <path d="M3 10v4h4l5 5V5L7 10H3zm13.5 2c0-1.77-1.02-3.29-2.5-4.03v8.06c1.48-.74 2.5-2.26 2.5-4.03z"/>
+        </svg>
+      </div>
+    </div>
+  </header>
+    <h1>LE CHATEAU AMBULANT</h1>
+
+<p>Au milieu des montagnes et des nuages, une silhouette titube sur ses jambes mécaniques :<br> c’est le château d’Hauru. Un amas de bric-à-brac enchanté, soufflé par la magie et la mécanique, qui abrite bien plus qu’un simple foyer.</p>
+<div class="hidden-room">
+À l’intérieur, Sophie, transformée par un sort mystérieux, trouve refuge. C’est ici que commence son voyage, entre mondes flottants, cuisines bancales, et secrets bien gardés. Tout craque, tout fume, mais tout vit.
+</div>
+
+    <button class="reveal-btn">En savoir plus</button>
+    <a href="#calcifer" class="nav-arrow">→ Aller voir Calcifer</a>
+  </section>
+
+  <section class="section" id="calcifer">
+    <h2>Calcifer</h2>
+    <div class="calcifer-dialogue"></div>
+<p>
+Dans l’âtre, un petit feu clignote et parle. Insolent, capricieux, drôle… mais surtout, puissant. C’est Calcifer, un démon du feu lié à Hauru par un pacte secret.
+</p>
+<div class="hidden-room">
+Il n’est pas qu’une flamme. Il est la force motrice du château, la source de sa magie et le gardien d’un lourd secret. Sans lui, tout s’éteindrait. Mais attention, il n’aide que ceux qui savent négocier.
+</div>
+
+    <div class="spark" style="left: 48%; top:30%; animation-delay: 0s;"></div>
+    <div class="spark" style="left: 52%; top: 30%;animation-delay: 0.5s;"></div>
+    <div class="spark" style="left: 44%; top: 30%;animation-delay: 1s;"></div>
+    <div class="spark" style="right: 44%; top: 30%;animation-delay: 1.5s;"></div>
+    <button class="reveal-btn">En savoir plus</button>
+    <a href="#sorciere" class="nav-arrow" id="btncalci">→ Vers la Sorcière</a>
+  </section>
+
+  <section class="section" id="sorciere">
+    <h2>La Sorcière des Landes</h2>
+
+<p>
+Venue des brumes, la Sorcière des Landes marche lentement, mais son aura devance chacun de ses pas. <br>Elle connaît la magie ancienne, les sorts qui déforment le corps et les cœurs.
+</p>
+<div class="hidden-room">
+Elle a aimé Hauru. Elle le pourchasse encore, mue par la jalousie et le besoin de posséder ce qu’elle ne comprend plus.<br> Mais derrière ses illusions et ses sortilèges, peut-être reste-t-il une femme… perdue.
+</div>
+    <button class="reveal-btn">En savoir plus</button>
+    <a href="#guerre" class="nav-arrow">→ En route vers la guerre</a>
+  </section>
+
+  <section class="section" id="guerre">
+    <h2>Le Monde en Guerre</h2>
+<p>
+Au-delà du château, le monde brûle. Les nations s’affrontent dans une guerre sans fin.<br> Des machines volantes sillonnent le ciel, les bombes éclatent sur les toits, les cris se perdent dans la fumée.
+</p>
+<div class="hidden-room">
+Hauru, malgré sa nature insaisissable, se jette dans la bataille pour protéger ceux qu’il aime. Chaque sort qu’il lance l’épuise. Chaque nuit, il revient un peu moins lui-même. Et pourtant… il continue. Pour Sophie.
+</div>
+
+    <button class="reveal-btn">En savoir plus</button>
+    <a href="#footer" class="nav-arrow">↑ Fin du voyage</a>
+      <footer id="footer">
+    <p>&copy; 2025 Noémie & Karys. <a href="a-propos.html">À propos</a></p>
+  </footer>
+  </section>
+
+
+</body>
+</html>

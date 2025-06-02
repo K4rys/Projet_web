@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="img/icone-site.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="../css/contact.css">
+  <script src="../js/contact.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header">
+    <nav>
+      <div class="logo">
+        <img src="../image/logo.png" alt="Logo" width="200" height="100">
+      </div>
+      <a href="index.html">Accueil</a>
+      <a href="jeu.html">Jeux</a>
+      <a href="contact.html">Contact</a>
+      <a href="a-propos.html">À propos</a>
+    </nav>
+  </header>
+
+  <form id="contactForm"  class="contact-form">
+    <h2>Contactez-nous</h2>
+    <div class="input-group">
+      <input type="text" name="name" id="nom" required placeholder="Votre nom">
+    </div>
+    <div class="input-group">
+      <input type="email" name="email" id="email" required placeholder="Votre email">
+    </div>
+    <div class="input-group">
+      <textarea name="message" id="message" rows="5" required placeholder="Votre message..."></textarea>
+    </div>
+    <button type="submit" class="send-button"><span>Envoyer</span></button>
+  </form>
+
+  <div id="successMessage" class="success-message">Merci pour votre message !</div>
+  <audio id="blingSound" src="../son/validation.mp3" preload="auto"></audio>
+
+  <footer id="footer">
+    <p>&copy; 2025 Noémie & Karys. <a href="a-propos.html">À propos</a></p>
+  </footer>
+</body>
+</html>
