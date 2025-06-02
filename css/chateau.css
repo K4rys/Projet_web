@@ -1,0 +1,465 @@
+:root {
+  --bronze: #b08d57;
+  --or: #ffd700;
+  --argent: #c0c0c0;
+  --feu1: #ff4500;
+  --feu2: #8e0f44;
+  --feu3: #ffff33;
+
+  --chat1: #4F3C2F;
+  --chat2: #E5D3C1;
+  --chat3: #B07052;
+  --chat4: #1E2520;
+  --chat5: #4A4E1C;
+  --chat6: #AA9AC8;
+
+  --chat1-rgb: 79, 60, 47;
+  --chat2-rgb: 229, 211, 193;
+  --chat3-rgb: 176, 112, 82;
+  --chat4-rgb: 30, 37, 32;
+  --chat5-rgb: 74, 78, 28;
+  --chat6-rgb: 170, 154, 200;
+}
+
+
+
+/* ==== Structure de base ==== */
+html, body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(69, 125, 148, 0.6);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+
+body.sophie-active header {
+  display: flex;
+}
+
+footer {
+  margin-top: 45%;
+  position:fixed;
+  text-decoration:none;
+  width:105%;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.8em;
+}
+footer a{
+  text-decoration:none;
+  color: #fff;
+}
+
+.section#guerre.active ~ footer {
+  display: block;
+}
+
+/* ==== Layout de section ==== */
+.section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.8em;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+  padding: 80px 40px;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px) scale(0.95);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  z-index: 1;
+}
+.section.active {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+/* ==== Spécifiques sections ==== */
+
+  @keyframes explosion {
+    0% {
+      transform: scale(0.5);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+
+.explosion {
+  position: absolute;
+  width: 120px; /* adapte à la taille de ton gif */
+  height: 120px;
+  pointer-events: none;
+  opacity:0.3;
+}
+
+.section#calcifer {
+  background: url('../image/chateaufond.gif') center center / cover no-repeat;
+}
+.section:not(#calcifer) {
+  background: linear-gradient(to bottom, #1c1c1c, #000);
+}
+
+.section#sophie{
+  background: url('../image/fondentre.webp') center center / cover no-repeat;
+  text-align:center;
+}
+.section#guerre{
+  background: url('../image/guerre.jpeg') center center / cover no-repeat;
+  position: relative;
+  height: auto;
+  min-height: 100vh;
+  padding-bottom: 120px;
+  overflow:hidden;
+}
+.section#sorciere{
+  background: url('../image/sorcierelande.png') center center/ cover  no-repeat;
+  position:relative;
+  text-align:center;
+}
+ 
+.section#calcifer a,.section#calcifer button{
+  background-color:rgba(var(--chat3-rgb),0.3)
+}
+/* ==== Contenu caché qui se révèle ==== */
+.hidden-room {
+  max-width: 800px;
+  margin-top: 20px;
+  font-size: 0.6em;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  pointer-events: none;
+}
+.hidden-room.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ==== Navigation et logos ==== */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+  color: #fff;
+  justify-content: center;
+}
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  transition: color 0.3s;
+}
+.nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* ==== Boutons et interactions ==== */
+.icon-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+ 
+}
+#mute-toggle {
+  background-color: var(--base-variant);
+}
+#mute-icon {
+  fill: #fff;
+}
+#mute-toggle, #mute-icon {
+  transition: background-color 0.3s, fill 0.3s;
+}
+.nav-arrow {
+  margin-top: 40px;
+  font-size: 0.8em;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  border: 2px solid white;
+  transition: background 0.3s;
+}
+.nav-arrow:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* ==== Carte latérale ==== */
+.explore-map {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.explore-map a {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.8em;
+  transition: background 0.3s;
+}
+.explore-map a.active {
+ background: rgba(69, 125, 148, 0.6);
+ background: rgba(69, 125, 148, 0.6);
+  font-weight: bold;
+}
+.explore-map a:hover {
+  background: var(--chat2);
+}
+
+/* ==== Animation étincelles ==== */
+.section#calcifer .spark {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--feu1, #ff4500);
+  border-radius: 50%;
+  animation: float 2s infinite ease-in-out;
+  opacity: 0.6;
+}
+@keyframes float {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-100px); opacity: 0; }
+}
+
+
+
+
+  @keyframes explosion {
+    0% { transform: scale(0.5); opacity: 0.8; }
+    50% { transform: scale(1.5); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
+  }
+
+  .explosion {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  /* === Sorcière : texte ensorcelé === */
+  .section#sorciere h2, .section#sorciere p {
+    animation: shimmer 2s infinite alternate;
+  }
+
+  @keyframes shimmer {
+    0% { text-shadow: 0 0 10px #8e0f44, 0 0 20px #4a4e1c; }
+    100% { text-shadow: 0 0 20px #e5d3c1, 0 0 30px #b07052; }
+  }
+
+  /* === Sorcière : effet miroir magique === */
+  .section#sorciere::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.2) 0%, transparent 70%);
+    mix-blend-mode: screen;
+    pointer-events: none;
+    animation: pulseMirror 4s infinite ease-in-out;
+    z-index: 10;
+  }
+  @keyframes pulseMirror {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.25; }
+}
+
+
+
+
+
+  /* === Guerre : background tremblement === */
+  .section#guerre.active {
+    animation: shake 2s infinite;
+  }
+
+  @keyframes shake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(1px, -1px); }
+    50% { transform: translate(-1px, 1px); }
+    75% { transform: translate(1px, 1px); }
+    100% { transform: translate(-1px, -1px); }
+  }
+
+  /* === Dialogue Calcifer === */
+  .calcifer-dialogue {
+    position: absolute;
+    bottom: 10%;
+    background: rgba(125, 7, 7, 0.47);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    box-shadow: 0 0 10px var(--bronze);
+    animation: fadeInOut 8s ease-in-out infinite;
+    z-index: 3;
+  }
+
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+  }
+
+
+
+
+/* === Bouton savoir plus === */
+.reveal-btn {
+  padding: 6px 14px;
+  font-size: 0.7em;
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+}
+
+.reveal-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 768px) {
+  .section {
+    font-size: 1.1em;
+    padding: 60px 20px;
+  }
+
+  .hidden-room {
+    font-size: 0.8em;
+    padding: 15px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .explore-map {
+    top: auto;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .explore-map a {
+    padding: 8px 10px;
+    font-size: 0.7em;
+  }
+
+  .nav-arrow {
+    font-size: 0.7em;
+    padding: 8px 14px;
+    margin-top: 25px;
+  }
+
+  .icon-button {
+    width: 36px;
+    height: 36px;
+    margin-top: 10px;
+  }
+
+  .calcifer-dialogue {
+    bottom: 160px; /* on relève pour éviter le bouton sur mobile */
+    padding: 8px 14px;
+    font-size: 0.7em;
+    max-width: 90vw;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 0.7em;
+    padding: 8px 0;
+    margin-top: 60%;
+  }
+
+  .section#sophie,
+  .section#sorciere,
+  .section#guerre,
+  .section#calcifer {
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .explosion {
+    width: 80px;
+    height: 80px;
+  }
+}

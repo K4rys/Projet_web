@@ -1,0 +1,405 @@
+
+:root {
+
+
+  /* RGB version (for rgba backgrounds) 
+  --chihi1-rgb: 51, 90, 102;
+  --chihi2-rgb: 58, 125, 144;
+  --chihi3-rgb: 80, 178, 200;
+  --chihi4-rgb: 167, 201, 199;
+  --chihi5-rgb: 229, 220, 201;
+  --chihi6-rgb: 232, 124, 95;
+  --chihi7-rgb: 92, 77, 58;
+  --chihi8-rgb: 65, 57, 46;*/
+
+  --chihi1: #F5F3EC;   /* Blanc crème fleuri */
+  --chihi2: #7E8C74;   /* Vert doux feuille */
+  --chihi3: #F8B9BD;   /* Rose pastel clair */
+  --chihi4: #C83649;   /* Rouge fleuri intense */
+  --chihi5: #2E3815;   /* Vert foncé sous-bois */
+  --chihi6: #8B4434;   /* Terre cuivrée (robe) */
+
+  --chihi1-rgb: 245, 243, 236;
+  --chihi2-rgb: 126, 140, 116;
+  --chihi3-rgb: 248, 185, 189;
+  --chihi4-rgb: 200, 54, 73;
+  --chihi5-rgb: 46, 56, 21;
+  --chihi6-rgb: 139, 68, 52;
+  /* MONONOKE PALETTE */
+
+  --mono1: #12191F;  /* Bleu nuit profond */
+  --mono2: #18212A;  /* Bleu pétrole très foncé */
+  --mono3: #2C3445;  /* Bleu gris foncé */
+  --mono4: #6B7279;  /* Gris ardoise */
+  --mono5: #B7C5BF;  /* Vert grisé pâle */
+  --mono6: #880F18;  /* Rouge sang profond */
+  --mono7: #692C25;  /* Brun rouge */
+  --mono8: #9C8576;  /* Brun beige */
+  --mono9: #C7C3B7;  /* Gris beige très clair */
+  --mono10: #B1C6BD; /* Vert menthe grisé */
+  --mono11: #76818B; /* Gris bleuté moyen */
+  --mono12: #2F3442; /* Bleu encre */
+  --mono13: #191C25; /* Bleu-noir */
+
+  /* RGB version (for rgba backgrounds) */
+  --mono1-rgb: 18, 25, 31;
+  --mono2-rgb: 24, 33, 42;
+  --mono3-rgb: 44, 52, 69;
+  --mono4-rgb: 107, 114, 121;
+  --mono5-rgb: 183, 197, 191;
+  --mono6-rgb: 136, 15, 24;
+  --mono7-rgb: 105, 44, 37;
+  --mono8-rgb: 156, 133, 118;
+  --mono9-rgb: 199, 195, 183;
+  --mono10-rgb: 177, 198, 189;
+  --mono11-rgb: 118, 129, 139;
+  --mono12-rgb: 47, 52, 66;
+  --mono13-rgb: 25, 28, 37;
+
+
+  /* TOTORO PALETTE */
+
+  --toto1: #3A3125;  /* Brun foncé terre */
+  --toto2: #496F5E;  /* Vert forêt tamisé */
+  --toto3: #D6DAD4;  /* Gris clair argenté */
+  --toto4: #444C69;  /* Bleu ardoise */
+  --toto5: #C18B38;  /* Moutarde doré */
+  --toto6: #B74559;  /* Framboise foncé */
+  --toto7: #6D6561;  /* Taupe moyen */
+  --toto8: #C7B89D;  /* Beige doux */
+  --toto9: #3A402A;  /* Vert mousse foncé */
+  --toto10: #3C384D; /* Gris violacé foncé */
+  --toto11: #1E1C1E; /* Noir très foncé, violacé */
+
+  /* RGB version (for rgba backgrounds) */
+  --toto1-rgb: 58, 49, 37;
+  --toto2-rgb: 73, 111, 94;
+  --toto3-rgb: 214, 218, 212;
+  --toto4-rgb: 68, 76, 105;
+  --toto5-rgb: 193, 139, 56;
+  --toto6-rgb: 183, 69, 89;
+  --toto7-rgb: 109, 101, 97;
+  --toto8-rgb: 199, 184, 157;
+  --toto9-rgb: 58, 64, 42;
+  --toto10-rgb: 60, 56, 77;
+  --toto11-rgb: 30, 28, 30;
+
+
+
+  /* RGB version (for rgba backgrounds) 
+  --chat1-rgb: 74, 74, 74;
+  --chat2-rgb: 168, 168, 168;
+  --chat3-rgb: 255, 211, 182;
+  --chat4-rgb: 30, 58, 95;
+  --chat5-rgb: 63, 107, 174;
+  --chat6-rgb: 227, 198, 168;
+  --chat7-rgb: 247, 227, 161;
+  --chat8-rgb: 244, 197, 66;
+  --chat9-rgb: 224, 122, 63;
+  --chat10-rgb: 107, 63, 46;*/
+
+
+
+  --chat1: #4F3C2F;   /* Bois brun foncé (meuble) */
+  --chat2: #E5D3C1;   /* Beige rosé (draps) */
+  --chat3: #B07052;   /* Terre cuivrée (lit) */
+  --chat4: #1E2520;   /* Vert foncé profond (livres/ombre) */
+  --chat5: #4A4E1C;   /* Vert olive terne (éléments décoratifs) */
+  --chat6: #AA9AC8;   /* Lavande pâle (jouet) */
+
+  --chat1-rgb: 79, 60, 47;
+  --chat2-rgb: 229, 211, 193;
+  --chat3-rgb: 176, 112, 82;
+  --chat4-rgb: 30, 37, 32;
+  --chat5-rgb: 74, 78, 28;
+  --chat6-rgb: 170, 154, 200;
+
+
+}
+html{
+  background-image: linear-gradient(135deg, rgba(var(--chihi1-rgb), 0.8), rgba(var(--chihi2-rgb), 0.8)), url('https://cdn.pixabay.com/photo/2016/11/29/09/08/forest-1867184_1280.jpg');
+}
+  .success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--chihi4);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(-20px);
+    z-index: 10000;
+  }
+.success-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.contact-form {
+  min-height:70vh;
+  background: rgba(197, 18, 125, 0.866);
+  padding: 30px;
+  z-index:0;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: 10px auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.contact-form h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  margin-top:2%;
+  padding: 12px 15px;
+  border: 2px solid var(--chihi4);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--text-color);
+  font-family: "Crimson Pro", serif;
+  font-size: 1em;
+  transition: border 0.3s, background 0.3s;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(242, 232, 201, 0.7);
+  margin-top:2%;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--toto6);
+  background: rgba(255, 255, 255, 0.25);
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.send-button {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(16, 12, 43, 0.763); /* Couleur de base du bouton */
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 20px;
+  margin-top:3%;
+  font-size: 1.1em;
+  font-family: "Crimson Pro", serif;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.send-button:hover {
+  color:#fff;/* Couleur du texte au survol */
+  box-shadow: #F2E8C9 4px 8px rgba(0, 0, 0, 0.2);
+  transform:scale(1.05)
+}
+
+/* Volet qui glisse */
+.send-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* commence hors du bouton à gauche */
+  width: 100%;
+  height: 100%;
+  background-color: rgb(175, 55, 127);
+  color:#fff; /* Couleubr du "volet" */
+  z-index: 0;
+  transition: left 0.4s ease;
+ 
+}
+
+/* Texte du bouton toujours au-dessus du volet */
+.send-button span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animation sur hover */
+.send-button:hover::before {
+  left: 0;
+  
+}
+  
+  /* Animation d'arrivée */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px);}
+    100% { opacity: 1; transform: translateY(0);}
+  }
+  
+  html, body {
+    background: url('../image/contact.jpg');
+    color: black;
+    font-family: "Crimson Pro", serif;
+    overflow: hidden;
+}
+
+
+
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    color: #fff;
+    text-decoration:none;
+    text-align: center;
+    line-height: 60px;
+    font-size: 14px;
+    transition: background-color 0.5s ease;
+    z-index: 10;
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+  }
+footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+nav {
+
+  display: flex;
+  color: #fff;
+  gap: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  margin-top: 2%;
+  margin-left:50px;
+  position: relative;
+  padding-bottom:0;
+  margin-bottom:0;
+  transition: color 0.3s;
+
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s;
+
+  bottom: -5px;
+  left: 0;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+.popup-bubble {
+  position: fixed;
+  bottom: 80px;
+  right: -500px;
+  background: #d6f4dc;
+  color: #2c5537;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-weight: bold;
+  font-size: 1em;
+  transition: right 0.5s ease, opacity 0.5s ease;
+  z-index: 999;
+}
+
+
+
+@media (max-width: 768px) {
+  .contact-form {
+    width: 90%;
+    padding: 20px;
+    margin: 60px auto 100px auto;
+    border-radius: 15px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 1em;
+  }
+
+  nav {
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 0.75em;
+  }
+
+  footer {
+    font-size: 13px;
+    height: auto;
+    padding: 10px 5px;
+    line-height: 1.5em;
+    text-align: center;
+  }
+
+  footer p {
+    margin: 0;
+  }
+}
+
+
+
+
+
+
+  
+
+  
+  
+  
+

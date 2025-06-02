@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+
+
+  /* RGB version (for rgba backgrounds) 
+  --chihi1-rgb: 51, 90, 102;
+  --chihi2-rgb: 58, 125, 144;
+  --chihi3-rgb: 80, 178, 200;
+  --chihi4-rgb: 167, 201, 199;
+  --chihi5-rgb: 229, 220, 201;
+  --chihi6-rgb: 232, 124, 95;
+  --chihi7-rgb: 92, 77, 58;
+  --chihi8-rgb: 65, 57, 46;*/
+
+  --chihi1: #F5F3EC;   /* Blanc crème fleuri */
+  --chihi2: #7E8C74;   /* Vert doux feuille */
+  --chihi3: #F8B9BD;   /* Rose pastel clair */
+  --chihi4: #C83649;   /* Rouge fleuri intense */
+  --chihi5: #2E3815;   /* Vert foncé sous-bois */
+  --chihi6: #8B4434;   /* Terre cuivrée (robe) */
+
+  --chihi1-rgb: 245, 243, 236;
+  --chihi2-rgb: 126, 140, 116;
+  --chihi3-rgb: 248, 185, 189;
+  --chihi4-rgb: 200, 54, 73;
+  --chihi5-rgb: 46, 56, 21;
+  --chihi6-rgb: 139, 68, 52;
+  /* MONONOKE PALETTE */
+
+  --mono1: #12191F;  /* Bleu nuit profond */
+  --mono2: #18212A;  /* Bleu pétrole très foncé */
+  --mono3: #2C3445;  /* Bleu gris foncé */
+  --mono4: #6B7279;  /* Gris ardoise */
+  --mono5: #B7C5BF;  /* Vert grisé pâle */
+  --mono6: #880F18;  /* Rouge sang profond */
+  --mono7: #692C25;  /* Brun rouge */
+  --mono8: #9C8576;  /* Brun beige */
+  --mono9: #C7C3B7;  /* Gris beige très clair */
+  --mono10: #B1C6BD; /* Vert menthe grisé */
+  --mono11: #76818B; /* Gris bleuté moyen */
+  --mono12: #2F3442; /* Bleu encre */
+  --mono13: #191C25; /* Bleu-noir */
+
+  /* RGB version (for rgba backgrounds) */
+  --mono1-rgb: 18, 25, 31;
+  --mono2-rgb: 24, 33, 42;
+  --mono3-rgb: 44, 52, 69;
+  --mono4-rgb: 107, 114, 121;
+  --mono5-rgb: 183, 197, 191;
+  --mono6-rgb: 136, 15, 24;
+  --mono7-rgb: 105, 44, 37;
+  --mono8-rgb: 156, 133, 118;
+  --mono9-rgb: 199, 195, 183;
+  --mono10-rgb: 177, 198, 189;
+  --mono11-rgb: 118, 129, 139;
+  --mono12-rgb: 47, 52, 66;
+  --mono13-rgb: 25, 28, 37;
+
+
+  /* TOTORO PALETTE */
+
+  --toto1: #3A3125;  /* Brun foncé terre */
+  --toto2: #496F5E;  /* Vert forêt tamisé */
+  --toto3: #D6DAD4;  /* Gris clair argenté */
+  --toto4: #444C69;  /* Bleu ardoise */
+  --toto5: #C18B38;  /* Moutarde doré */
+  --toto6: #B74559;  /* Framboise foncé */
+  --toto7: #6D6561;  /* Taupe moyen */
+  --toto8: #C7B89D;  /* Beige doux */
+  --toto9: #3A402A;  /* Vert mousse foncé */
+  --toto10: #3C384D; /* Gris violacé foncé */
+  --toto11: #1E1C1E; /* Noir très foncé, violacé */
+
+  /* RGB version (for rgba backgrounds) */
+  --toto1-rgb: 58, 49, 37;
+  --toto2-rgb: 73, 111, 94;
+  --toto3-rgb: 214, 218, 212;
+  --toto4-rgb: 68, 76, 105;
+  --toto5-rgb: 193, 139, 56;
+  --toto6-rgb: 183, 69, 89;
+  --toto7-rgb: 109, 101, 97;
+  --toto8-rgb: 199, 184, 157;
+  --toto9-rgb: 58, 64, 42;
+  --toto10-rgb: 60, 56, 77;
+  --toto11-rgb: 30, 28, 30;
+
+
+
+  /* RGB version (for rgba backgrounds) 
+  --chat1-rgb: 74, 74, 74;
+  --chat2-rgb: 168, 168, 168;
+  --chat3-rgb: 255, 211, 182;
+  --chat4-rgb: 30, 58, 95;
+  --chat5-rgb: 63, 107, 174;
+  --chat6-rgb: 227, 198, 168;
+  --chat7-rgb: 247, 227, 161;
+  --chat8-rgb: 244, 197, 66;
+  --chat9-rgb: 224, 122, 63;
+  --chat10-rgb: 107, 63, 46;*/
+
+
+
+  --chat1: #4F3C2F;   /* Bois brun foncé (meuble) */
+  --chat2: #E5D3C1;   /* Beige rosé (draps) */
+  --chat3: #B07052;   /* Terre cuivrée (lit) */
+  --chat4: #1E2520;   /* Vert foncé profond (livres/ombre) */
+  --chat5: #4A4E1C;   /* Vert olive terne (éléments décoratifs) */
+  --chat6: #AA9AC8;   /* Lavande pâle (jouet) */
+
+  --chat1-rgb: 79, 60, 47;
+  --chat2-rgb: 229, 211, 193;
+  --chat3-rgb: 176, 112, 82;
+  --chat4-rgb: 30, 37, 32;
+  --chat5-rgb: 74, 78, 28;
+  --chat6-rgb: 170, 154, 200;
+
+
+}
+
+
+
+
+
+
+body{
+    margin: 0;
+    background: transparent;
+    color: #eee;
+    font-family: Poppins;
+   
+    height: 100%;
+    font-size: 12px;
+   
+}
+a{
+    text-decoration: none;
+}
+header{
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+header a{
+    color: #eee;
+    margin-right: 40px;
+}
+/* carousel */
+.carousel{
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+.carousel .list .item .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .topic{
+    color: #f1683a;
+}
+.carousel .list .item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.carousel .list .item .buttons button{
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+.carousel .list .item .buttons button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+/* thumbail */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.thumbnail .item .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color:rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{
+    font-weight: 500;
+}
+.thumbnail .item .content .description{
+    font-weight: 300;
+}
+/* arrows */
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+/* animation text in first item */
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons a
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons a{
+    animation-delay: 1.8s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+    z-index: 100;
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+/* running time */
+
+.carousel .time{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+    animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
+}
+
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons a 
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
+}
+
+
+#monono {
+  color: var(--mono6); /* Rouge sang profond */
+
+}
+
+#chihi {
+  color: var(--chihi4);
+
+}
+
+
+#toto {
+  color: var(--toto8);
+
+}
+#chateau {
+  color: var(--chat4);
+
+}
+
+#deschat{
+    background-color:rgba(var(--chat4-rgb), 0.3);
+}
+
+#desmono{
+    background-color:rgba(var(--mono8-rgb), 0.3);
+}
+
+#btnchihi{
+    background-color:rgba(var(--chihi4-rgb), 0.8);
+    color:white;
+    text-align:center;
+}
+#btnchateau{
+    background-color:rgba(var(--chat4-rgb), 0.8);
+    color:white;
+    text-align:center;
+}
+#btnmono{
+    background-color:rgba(var(--mono6-rgb), 0.8);
+    color:white;
+    text-align:center;
+}
+#btnchat{
+    background-color:rgba(var(--chat4-rgb), 0.8);
+    color:white;
+    text-align:center;
+}
+#btntoto{
+    background-color:rgba(var(--toto8-rgb), 0.8);
+    color:white;
+    text-align:center;
+}
+
+
+
+nav {
+  display: flex;
+  color: #fff;
+  gap: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav a {
+  text-decoration: none;
+
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+.logo img{
+    margin-left:-70%;
+    margin-top:25%;
+    
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 10;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+
+/* === Mode clair === */
+#mute-toggle {
+    background-color: var(--base-variant);
+  }
+  
+  #mute-icon {
+    fill: #fff;
+  }
+
+    
+  /* (facultatif mais joli) transition fluide */
+  #mute-toggle, #mute-icon {
+    transition: background-color 0.3s, fill 0.3s;
+  }
+
+  .icon-button {
+    width: 44px;
+    height: 44px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+
+  @media screen and (max-width: 678px) {
+    body{
+        background:black;
+    }
+  header {
+    flex-direction: row;
+    height: auto;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  nav {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin: 0;
+  }
+
+  .logo img {
+    margin: 0;
+    max-width: 140px;
+  }
+
+
+
+  .arrows {
+    top: auto;
+    bottom: 100px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  footer{
+    bottom:-20%;
+  }
+
+
+}

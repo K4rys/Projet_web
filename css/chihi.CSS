@@ -1,0 +1,324 @@
+/* === ANIMATIONS & AMBIANCE CHIHIRO === */
+.ghost, .lantern, .floating-item {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: black;
+}
+header{
+  height:100px;
+  text-align: left;
+  background-color: black;
+  z-index:100;
+  align-content: center;
+
+  justify-content: space-between;
+     
+}
+main {
+  flex: 1;
+}
+@keyframes floatGhost {
+  0%   { transform: translateY(0) translateX(0); opacity: 0.3; }
+  50%  { transform: translateY(-100px) translateX(30px); opacity: 0.8; }
+  100% { transform: translateY(-200px) translateX(0); opacity: 0.3; }
+}
+
+footer {
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+
+/* === Fond mystique avec brume et lanternes === */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  background: radial-gradient(ellipse at center, rgba(var(--chihi1-rgb), 0.1), transparent 70%), url("image/brouillard.png") repeat;
+  animation: fogMove 60s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fogMove {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 0; }
+}
+
+/* === Esprits flottants === */
+.ghost {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: url("../image/ghost.png") no-repeat center/contain;
+  opacity: 0.6;
+  animation: floatGhost 20s infinite ease-in-out;
+  pointer-events: none;
+}
+
+
+
+
+
+/* === Lanternes flottantes === */
+.lantern {
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  background: url("../image/lantern.png") no-repeat center/contain;
+  animation: floatLantern 30s linear infinite;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes floatLantern {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-200px) rotate(10deg); }
+}
+
+/* === Transition magique === */
+.magic-transition {
+  animation: fadeMagic 3s ease-in-out;
+}
+
+@keyframes fadeMagic {
+  0% { opacity: 0; filter: blur(20px); }
+  100% { opacity: 1; filter: blur(0); }
+}
+
+/* === Objets flottants (papier, feuilles) === */
+.floating-item {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url("../image/feuille.png") no-repeat center/contain;
+  animation: floatLeaf 25s linear infinite;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+@keyframes floatLeaf {
+  0%   { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-300px) rotate(360deg); }
+}
+
+
+.content{
+    display: flex;             /* passe en flexbox ligne */
+  align-items: center;       /* aligne verticalement logo + nav */
+  justify-content: center;   /* centre tout horizontalement dans content */
+  gap: 40px; 
+
+}
+
+.nav{
+  display:flex;
+  color: #fff;
+  gap: 30px;
+  justify-content: center;
+    text-decoration: none;
+}
+#logo{
+    margin: 0;
+}
+
+.nav a{
+  text-decoration: none;
+color: #fff;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s;
+    text-decoration: none;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.nav a:hover::after {
+  width: 100%;
+    text-decoration: none;
+}
+
+
+footer {
+
+  bottom: 0;
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 10;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+
+/* === Mode clair === */
+#mute-toggle {
+    background-color: var(--base-variant);
+  }
+  
+  #mute-icon {
+    fill: #fff;
+  }
+
+    
+  /* (facultatif mais joli) transition fluide */
+  #mute-toggle, #mute-icon {
+    transition: background-color 0.3s, fill 0.3s;
+  }
+
+
+  .icon-button {
+    width: 44px;
+    height: 44px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    margin-top:20px;
+
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+
+     .scroll-story {
+      scroll-behavior: smooth;
+    }
+    .story-block {
+      min-height: 100vh;
+      padding: 4em 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #fff;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .story-block:nth-child(1) {
+      background-image: url("../image/fond.webp");
+    }
+    .story-block:nth-child(2) {
+      background-image: url("../image/tunnel.jpg");
+    }
+    .story-block:nth-child(3) {
+      background-image: url("../image/fond2chihi.png");
+    }
+    .story-block:nth-child(4) {
+      background-image: url("../image/bg3.jpg");
+    }
+    .story-block:nth-child(5) {
+      background-image: url("../image/bg4.jpg");
+    }
+    .story-block h1, .story-block h2 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    .story-block p {
+      font-size: 1.2em;
+      max-width: 800px;
+    }
+
+#fx-layer {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1; /* assez pour apparaître partout */
+  pointer-events: none;
+}
+
+
+#fx-layer .ghost,
+#fx-layer .lantern,
+#fx-layer .floating-item {
+  position: absolute;
+  will-change: transform;
+}
+
+.story-block p,h2, h1{
+  z-index:3;
+}
+
+
+@media screen and (max-width: 678px) {
+
+  body, html {
+    font-size: 14px;
+    overflow-x: hidden;
+    background-color: black;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px 0;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .icon-button {
+    margin-top: 10px;
+  }
+
+
+  footer {
+    position: relative;
+    margin-top: 30px;
+    font-size: 0.9em;
+  }
+
+  .ghost, .lantern, .floating-item {
+    width: 25px;
+    height: 25px;
+  }
+
+}
